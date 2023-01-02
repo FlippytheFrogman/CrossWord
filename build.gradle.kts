@@ -1,5 +1,7 @@
 plugins {
-    id("java")
+  java
+  id("org.springframework.boot") version "3.0.1"
+  id("io.spring.dependency-management") version "1.1.0"
 }
 
 group = "org.example"
@@ -10,8 +12,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+  implementation("org.springframework.boot:spring-boot-starter-actuator")
+  implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+  testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 tasks.getByName<Test>("test") {
