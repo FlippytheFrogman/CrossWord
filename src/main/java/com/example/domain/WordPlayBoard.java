@@ -5,14 +5,14 @@ import jakarta.persistence.Entity;
 import org.springframework.data.annotation.*;
 
 @Entity
-public class ScrabbleBoard {
+public class WordPlayBoard {
   @Id
   private Long id;
   @Column
   private String board;
-  public ScrabbleBoard() {
+  public WordPlayBoard() {
   }
-  public ScrabbleBoard(Long id, String board) {
+  public WordPlayBoard(Long id, String board) {
     this.id = id;
     this.board = board;
   }
